@@ -1,0 +1,23 @@
+<div id="login_box">
+  <h2>Reenvio de instruções de confirmação</h2>
+
+  <div class="content">
+
+    <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => {:method => :post}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="fields">
+          <%= f.label :email, "E-mail" %>
+          <%= f.email_field :email, :class => "input" %>
+        </div>
+
+        <div class="fields">
+          <%= f.submit "Reenviar instruções de confirmação", :class => "button" %>
+        </div>
+    <% end %>
+
+    <br/>
+
+    <%= render "usuarios/links" %>
+  </div>
+</div>

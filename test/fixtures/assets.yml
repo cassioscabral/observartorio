@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  asset_content_type: MyString
+  asset_file_name: MyString
+  asset_file_size: 1
+  asset_updated_at: 
+  biblioteca_id: 1
+
+two:
+  asset_content_type: MyString
+  asset_file_name: MyString
+  asset_file_size: 1
+  asset_updated_at: 
+  biblioteca_id: 1

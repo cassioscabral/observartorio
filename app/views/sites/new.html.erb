@@ -1,0 +1,30 @@
+<%= form_for(@site) do |f| %>
+    <% if @site.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+          <ul>
+            <% @site.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :nome_link_menu %><br />
+      <%= f.text_field :nome_link_menu %>
+    </div>
+    <div class="field">
+      <%= f.label "Conteudo html dos links:" %><br />
+      <%= f.text_area :conteudo_link %>
+    </div> <br>
+
+
+    <div class="actions">
+      <%= f.submit "Criar" %>
+    </div>
+<% end %>
+       <BR>
+
+<%= link_to 'Voltar', sites_path %>

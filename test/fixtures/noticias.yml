@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  resumo: MyText
+  conteudo: MyText
+  autor: MyString
+
+two:
+  titulo: MyString
+  resumo: MyText
+  conteudo: MyText
+  autor: MyString

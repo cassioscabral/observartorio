@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  categoria: MyString
+  path_arquivo: MyString
+
+two:
+  titulo: MyString
+  categoria: MyString
+  path_arquivo: MyString

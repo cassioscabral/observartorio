@@ -1,0 +1,25 @@
+<div id="login_box">
+  <h2>Esqueceu sua senha?</h2>
+
+  <div class="content">
+
+    <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="fields">
+          <%= f.label :email, "E-mail" %>
+          <%= f.email_field :email, :class => "input" %>
+        </div>
+
+        <br/>
+
+        <div class="fields">
+          <%= f.submit "Reinicializar senha", :class => "button" %>
+        </div>
+    <% end %>
+
+    <br/>
+
+    <%= render "usuarios/links" %>
+  </div>
+</div>

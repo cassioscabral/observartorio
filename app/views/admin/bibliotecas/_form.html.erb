@@ -1,0 +1,49 @@
+<%= form_for @biblioteca, :html => { :multipart => true } do |f| %>
+  <% if @biblioteca.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@biblioteca.errors.count, "error") %> prohibited this biblioteca from being saved:</h2>
+
+      <ul>
+      <% @biblioteca.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :categoria %><br />
+    <%= f.select :categoria, (["artigo", "audio", "video"]) %>
+
+  </div>
+  
+    <%= f.fields_for :assets do |asset_fields| %>
+
+    <% if asset_fields.object.new_record? %>
+    <p>
+      <%= asset_fields.file_field :asset %>
+    </p>
+    <% end %>
+       <% end %>
+
+    <%= f.fields_for :assets do |asset_fields| %>
+
+       <% unless asset_fields.object.new_record? %>
+            <p>
+              <%= link_to asset_fields.object.asset, asset_fields.object.asset.url  %>
+              <%= asset_fields.check_box :_destroy %>
+            </p>
+
+
+
+    <% end %>
+    <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

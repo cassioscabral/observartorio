@@ -1,0 +1,27 @@
+<h1>Listing bibliotecas</h1>
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Categoria</th>
+    <th>Path arquivo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bibliotecas.each  do |biblioteca| %>
+  <tr>
+    <td><%= biblioteca.titulo %></td>
+    <td><%= biblioteca.categoria %></td>
+    <td><%= biblioteca.path_arquivo %></td>
+    <td><%= link_to 'Show', biblioteca %></td>
+    <td><%= link_to 'Edit', edit_biblioteca_path(biblioteca) %></td>
+    <td><%= link_to 'Destroy', biblioteca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Biblioteca', new_biblioteca_path %>

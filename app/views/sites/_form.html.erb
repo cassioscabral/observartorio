@@ -1,0 +1,50 @@
+<%= form_for(@site) do |f| %>
+  <% if @site.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+      <ul>
+      <% @site.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      <script>
+    YUI({ filter:'raw' }).use('aui-ace-editor', function(A) {
+
+        var editor = new A.AceEditor(
+            {
+                boundingBox: '#editor',
+                // highlightActiveLine: false,
+                mode: 'html',
+                // readOnly: true,
+                // showPrintMargin: false,
+                // tabSize: 8,
+                // useSoftTabs: true,
+                // useWrapMode: true,
+                value: '<h1>digite seu html aqui</h1>'
+            }
+        ).render();
+
+    });
+    </script>
+
+  <div class="field">
+    <%= f.label :nome_link_menu %><br />
+    <%= f.text_field :nome_link_menu %>
+  </div>
+  <div class="field">
+    <%= f.label "Conteudo html dos links:" %><br />
+    <%= f.text_area :conteudo_link %>
+  </div> <br>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+

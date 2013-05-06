@@ -1,0 +1,23 @@
+<div id="login_box">
+  <h2>Reenvio de instruções de desbloqueio</h2>
+
+  <div class="content">
+
+    <%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => {:method => :post}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="fields">
+          <%= f.label :email, "E-mail" %>
+          <%= f.email_field :email, :class => "input" %>
+        </div>
+
+        <div class="fields">
+          <%= f.submit "Reenviar instruções de desbloqueio", :class => "button" %>
+        </div>
+    <% end %>
+
+    <br/>
+
+    <%= render "usuarios/links" %>
+  </div>
+</div>

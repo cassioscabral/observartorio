@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Observatório do Milênio</title>
+
+
+
+  <!-- Stylesheets -->
+
+ <%= stylesheet_link_tag "application", :media => "all" %>
+
+  <!-- Scripts -->
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<div class="geral">
+
+  <header id="top">
+
+    <nav class="menuTopo">
+      <ul>
+        <li><a href="/portal">Home</a></li>
+        <li><a href="/sites/1">Quem Somos</a></li>
+        <li><a href="/sites/2">O que é ODM ?</a></li>
+        <li><a href="/sites/3">Parceiros</a></li>
+        <li><a href="/sites/4">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="iconesOdmTopo">
+      <ul>
+        <li class="shadow" id="iconeOdm1">
+          <div class="tool-tip slideIn bottom">
+            <p> 1 - Erradicar a extrema pobreza e a fome</p><br>
+            <p> METAS:</p><br>
+            <p>Reduzir pela metade, até 2015, a proporção da população com renda abaixo da linha da pobreza. </p><br/>
+            <p> Reduzir pela metade, até 2015 a proporção da população que sofre de fome.</p>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm2">
+          <div class="tool-tip slideIn bottom">
+            <p> 2 - Atingir o ensino básico universal</p><br>
+            <p> METAS:</p><br>
+            <p>Garantir que, até 2015, todas as crianças, terminem o ensino fundamental. </p><br/>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm3">
+          <div class="tool-tip slideIn bottom">
+            <p> 3 - Promover a igualdade entre os sexos e a autonomia das mulheres</p><br>
+            <p> METAS:</p><br>
+            <p>Eliminar a disparidade entre os sexos no ensino fundamental e médio até 2005. </p><br/>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm4">
+          <div class="tool-tip slideIn bottom">
+            <p> 4 - Reduzir a mortalidade infantil</p><br>
+            <p> METAS:</p><br>
+            <p>Reduzir em dois terços, até 2015, a mortalidade materna de crianças menores de 5 anos </p><br/>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm5">
+          <div class="tool-tip slideIn bottom">
+            <p> 5 - Melhorar a saúde materna</p><br>
+            <p> METAS:</p><br>
+            <p>Reduzir em três quartos, até 2015, a taxa de mortalidade materna. </p><br/>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm6">
+          <div class="tool-tip slideIn bottom">
+            <p> 6 - Combater o HIV / AIDS, a malária e outras doenças</p><br>
+            <p> METAS:</p><br>
+            <p>Até 2015, ter detido e começado a reverter a propagação do HIV/AIDS. </p><br/>
+            <p>Até 2015, ter detido e começado a reverter a propagação da malária e de outras doenças.</p>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm7">
+          <div class="tool-tip slideIn bottom">
+            <p> 7 - Garantir a sustentabilidade ambiental</p><br>
+            <p> METAS:</p><br>
+            <p>Integrar os princípios do desenvolvimento sustentável nas políticas e programas nacionais e reverter a perda de recursos ambientais até 2015.</p><br/>
+            <p> Reduzir à metade, até 2015, a proporção da população sem acesso sustentável à água potável segura.</p>
+            <p>Até 2020, ter alcançado uma melhora significativa nas vidas de pelo menos 100 milhões de habitantes de bairros degradados.</p>
+          </div>
+        </li>
+
+        <li class="shadow" id="iconeOdm8">
+          <div class="tool-tip slideIn bottom">
+            <p> 8 - Estabelecer uma parceria mundial para o desenvolvimento.</p><br>
+            <p> METAS:</p><br>
+            <p>Em cooperação com os paises em desenvolvimento, formular e executar estratégias que permitam trabalho digno e produtivo aos jovens.</p><br/>
+            <p>Em cooperação com o setor privado, tornar acessíveis os benefícios das novas tecnologias, especialmente nos setores de informação e comunicação.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <div class="logo">
+      <h1></h1>
+    </div>
+
+  </header>
+
+  <nav class="menuHorizontal">
+    <ul>
+      <li><a href="#">Biblioteca</a></li>
+      <li><a href="#">Indicadores</a></li>
+      <li><a href="#">Boas Práticas</a></li>
+      <li><a href="#">Notícias</a></li>
+      <li><a href="#">Deixe sua Opinião</a></li>
+    </ul>
+
+
+  </nav>
+
+  <div id="container">
+
+    <aside id="barraLateral">
+
+      <nav class="menuLateral">
+
+        <ul>
+
+            <li><div class="shadow" id="iconeOdm1"></div><div class="shadow" id="iconeOdm2"></div></li>
+
+            <li><div class="shadow" id="iconeOdm3"></div><div class="shadow" id="iconeOdm4"></div></li>
+
+            <li><div class="shadow" id="iconeOdm5"></div><div class="shadow" id="iconeOdm6"></div></li>
+
+            <li><div class="shadow" id="iconeOdm7"></div><div class="shadow" id="iconeOdm8"></div></li>
+
+        </ul>
+
+      </nav>
+
+      <BR>
+
+    </aside>
+
+    <article class="conteudo">
+
+
+      <%= yield %>
+
+
+
+    </article>
+
+  </div>
+
+
+
+</div>
+<footer class="rodape">
+
+  <div class="bandeirasRodape">
+    <ul>
+      <li><a href="http://www.unipe.br" target="_blank"><div id="iconeUnipe"></div></a></li>
+      <li><a href="http://www.pnud.org.br" target="_blank"><div id="iconePnud"></div></a></li>
+      <li><a href="http://www.nospodemosparaiba.org.br/" target="_blank"><div id="iconeNosPodemos"></div></a></li>
+    </ul>
+  </div>
+
+</footer>
+
+  <%= javascript_include_tag "less-1.1.3.min" %>
+  <%= javascript_include_tag "modernizr" %>
+  <%= javascript_include_tag "application" %>
+
+<script type="text/javascript">
+  var altura = document.getElementById('container').offsetHeight;
+  document.getElementById('barraLateral').style.height = altura + 'px';
+
+</script>
+
+
+</body>
+</html>
+

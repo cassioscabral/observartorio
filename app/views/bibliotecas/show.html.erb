@@ -1,0 +1,31 @@
+<%= form_for (@biblioteca) do |f| %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @biblioteca.titulo %>
+</p>
+
+
+<p>
+  <b>Categoria:</b>
+  <%= @biblioteca.categoria %>
+</p>
+
+
+
+    <%= f.fields_for :assets do |asset_fields| %>
+
+       <% unless asset_fields.object.new_record? %>
+
+       		<p>
+  				<b>Faça o Download:</b>
+  				<%= link_to @biblioteca.titulo, asset_fields.object.asset.url  %>
+			</p>
+
+       <% end %>
+
+    <% end %>
+
+<% end %>
